@@ -162,8 +162,11 @@ class Main():
         df_p_maxidx = df_p.idxmax(axis = 1)
         vc = df_p_maxidx.value_counts()
 
-
-FLAG = True # 1.one-hot特徴量の場合 False, 2.混合特徴量の場合 True
+## ここを変更してデータセットを生成する
+# 1.FLAG = False にしてone-hot特徴量を生成する
+# 2.FLAG = True にして混合特徴量を生成する
+# 3.shuffle_columns.py を実行することで報酬期待値の異なるデータセットを4つ生成する
+FLAG = True
 num_arm = 8 #腕の数
 N = 16
 feature_dim = self.num_arm * self.N # 特徴量の数
