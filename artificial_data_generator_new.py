@@ -169,9 +169,9 @@ class Main():
 FLAG = True
 num_arm = 8 #腕の数
 N = 16
-feature_dim = self.num_arm * self.N # 特徴量の数
-aleph_opt = 0.75 # 最適な腕の報酬期待値
-data_size = 10000
+feature_dim = num_arm * N # 特徴量の数
+aleph_opt = 0.75 # 最適な腕の報酬期待値+0.05
+data_size = 100
 
 main = Main(FLAG, num_arm, N, feature_dim, aleph_opt, data_size)
 
