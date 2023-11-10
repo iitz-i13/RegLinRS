@@ -15,7 +15,7 @@ from policy.greedy import Greedy
 from realworld.setup_context import ContextData
 
 def main():
-    """main
+    """
 
     Args:
         N_SIMS(int) : sim数
@@ -43,7 +43,7 @@ def main():
 
     num_actions, context_dim = ContextData.get_data_info(data_type)
 
-    N_SIMS = 1
+    N_SIMS = 10
     N_STEPS = 20000
 
     N_ARMS = num_actions
@@ -57,7 +57,7 @@ def main():
         change_step = N_STEPS
     
     #従来版：True、制限版：False
-    Q_flag = False
+    Q_flag = True
     data_batch_size_ = 100 #直近何個の特徴ベクトルから行動価値を算出するか
     
     #ReglinRS
